@@ -1,0 +1,66 @@
+<template>
+  <section class="oauth-container">
+    <div class="form-container">
+      <p class="oauth-form-brand">{{ $t($i18nTags.oauth.form_brand) }}</p>
+      <p class="oauth-login-hint">{{ $t($i18nTags.oauth.login_hint) }}</p>
+    </div>
+
+    
+  </section>
+</template>
+
+<script lang="ts">
+import { Vue } from "vue-class-component"
+
+class OAuth extends Vue {}
+
+export default OAuth
+</script>
+
+<style lang="less" scoped>
+  .oauth-container {
+    margin-top: 30px;
+    padding: 20px;
+
+    .form-container {
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    @media (min-width: 768px) {
+      .form-container {
+        width: 360px;
+      }
+    }
+
+    .oauth-form-brand {
+      text-align: center;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 50px;
+      padding: 0 14px;
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    .oauth-login-hint {
+      text-align: center;
+      padding: 14px;
+      font-size: 14px;
+      margin: 0;
+      font-weight: bold;
+    }
+
+    .server-input-form-item {
+      margin: 0 auto;
+    }
+  }
+
+  .submit-server-name-btn {
+    width: 100%;
+    margin: 20px auto 0;
+    display: block;
+  }
+</style>
